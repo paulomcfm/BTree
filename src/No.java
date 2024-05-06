@@ -33,7 +33,9 @@ public class No {
            vLig[j]=vLig[j-1];
         }
     }
+    public void remanejarExclusao(int i) {
 
+    }
     public int getN() {
         return n;
     }
@@ -69,4 +71,5 @@ public class No {
     public void setTl(int tl) {
         this.TL = tl;
     }
+
 }
