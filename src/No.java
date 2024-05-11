@@ -1,13 +1,13 @@
 public class No {
-    public static final int n=2;
+    public static final int m=2;
     private int vInfo[];
     private int vPos[];
     private No vLig[];
     private int TL;
     public No() {
-        vInfo=new int[2*n+1];
-        vPos=new int[2*n+1];
-        vLig=new No[2*n+2];
+        vInfo=new int[2*m+1];
+        vPos=new int[2*m+1];
+        vLig=new No[2*m+2];
         TL=0;
     }
 
@@ -33,11 +33,13 @@ public class No {
            vLig[j]=vLig[j-1];
         }
     }
-    public void remanejarExclusao(int i) {
-
-    }
-    public int getN() {
-        return n;
+    public void remanejarExclusao(int pos) {
+        for (int i = pos; i < TL; i++) {
+            vInfo[i]=vInfo[i+1];
+            vPos[i]=vPos[i+1];
+            vLig[i]=vLig[i+1];
+        }
+        vLig[TL]=vLig[TL+1];
     }
 
     public int getvInfo(int p) {
